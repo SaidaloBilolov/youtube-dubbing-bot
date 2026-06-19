@@ -5,9 +5,10 @@ spring:
     active: ${SPRING_PROFILES_ACTIVE:dev}
 
   datasource:
-    url: ${DB_URL}
-    username: ${DB_USERNAME}
-    password: ${DB_PASSWORD}
+    # Neon'dan olgan URL'ingizni shu yerga qo‘ying
+    url: jdbc:postgresql://ep-royal-pine-attqpkdh-pooler.c-9.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require
+    username: neondb_owner
+    password: npg_V0dhTE5IZvMA
     driver-class-name: org.postgresql.Driver
     hikari:
       # --- Neon cold-start tuning ---
