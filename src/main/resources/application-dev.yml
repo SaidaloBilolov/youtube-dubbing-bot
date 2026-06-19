@@ -1,0 +1,4 @@
+logging:
+  level:
+    com.dubbing.bot: DEBUG
+    org.hibernate.SQL: DEBUG

@@ -1,0 +1,11 @@
+spring:
+  jpa:
+    properties:
+      hibernate:
+        jdbc:
+          batch_size: 20
+
+logging:
+  level:
+    root: WARN
+    com.dubbing.bot: INFO
