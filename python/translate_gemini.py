@@ -6,7 +6,7 @@ keeps segment boundaries aligned with the original timing.
 
 Usage:
     python translate_gemini.py --input in.srt --output out.srt --target-lang uz \
-        --model gemini-1.5-flash
+        --model gemini-2.5-flash
 
 The API key is read from the GEMINI_API_KEY environment variable.
 """
@@ -99,7 +99,7 @@ def main() -> None:
     parser.add_argument("--input", required=True)
     parser.add_argument("--output", required=True)
     parser.add_argument("--target-lang", required=True)
-    parser.add_argument("--model", default="gemini-1.5-flash")
+    parser.add_argument("--model", default="gemini-2.5-flash")
     args = parser.parse_args()
     translate(args.input, args.output, args.target_lang, args.model)
 

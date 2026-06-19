@@ -15,7 +15,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * Translates subtitles with Google Gemini 1.5 Flash by delegating to the Python
+ * Translates subtitles with Google Gemini Flash by delegating to the Python
  * helper (translate_gemini.py), which preserves SRT timestamps. The API key is
  * passed via environment, never on the command line, to avoid leaking it in logs.
  *

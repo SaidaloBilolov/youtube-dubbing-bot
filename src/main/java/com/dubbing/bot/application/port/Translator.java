@@ -3,7 +3,7 @@ package com.dubbing.bot.application.port;
 import java.nio.file.Path;
 
 /**
- * Port abstracting subtitle translation (Google Gemini 1.5 Flash).
+ * Port abstracting subtitle translation (Google Gemini Flash).
  * Implementations must preserve subtitle timing cues.
  */
 public interface Translator {

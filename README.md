@@ -1,7 +1,7 @@
 # YouTube Subtitle-to-Dubbing Telegram Bot
 
 A production-oriented Telegram bot that takes a YouTube link, downloads its
-subtitles, translates them (Google Gemini 1.5 Flash, timestamps preserved),
+subtitles, translates them (Google Gemini Flash, timestamps preserved),
 synthesizes Uzbek voice-over (Edge-TTS / XTTS v2), and merges the dubbed audio
 back into the video (FFmpeg).
 

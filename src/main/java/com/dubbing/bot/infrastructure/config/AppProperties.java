@@ -30,7 +30,7 @@ public class AppProperties {
     @Setter
     public static class Gemini {
         private String apiKey;
-        private String model = "gemini-1.5-flash";
+        private String model = "gemini-2.5-flash";
     }
 
     @Getter
