@@ -61,6 +61,15 @@
             <groupId>org.telegram</groupId>
             <artifactId>telegrambots-spring-boot-starter</artifactId>
             <version>${telegrambots.version}</version>
+            <exclusions>
+                <!-- Pulls jackson-module-jaxb-annotations which references the old
+                     javax.xml.bind API (absent on Java 17). Hibernate auto-registers
+                     every Jackson module on the classpath, so it must be excluded. -->
+                <exclusion>
+                    <groupId>com.fasterxml.jackson.module</groupId>
+                    <artifactId>jackson-module-jaxb-annotations</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
         <!-- Validation -->
