@@ -1,0 +1,31 @@
+services:
+  rabbitmq:
+    image: rabbitmq:3.13-management
+    container_name: dubbing-rabbitmq
+    ports:
+      - "5672:5672"     # AMQP
+      - "15672:15672"   # management UI
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_USERNAME:-guest}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_PASSWORD:-guest}
+    healthcheck:
+      test: ["CMD", "rabbitmq-diagnostics", "-q", "ping"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # Optional local Postgres for development. In production use Neon instead.
+  postgres:
+    image: postgres:16-alpine
+    container_name: dubbing-postgres
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: dubbing
+      POSTGRES_USER: dubbing
+      POSTGRES_PASSWORD: dubbing
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
